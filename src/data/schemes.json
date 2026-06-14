@@ -1,0 +1,96 @@
+{
+  "schemes": [
+    {
+      "id": "pm-kisan",
+      "name": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+      "hindi_name": "प्रधानमंत्री किसान सम्मान निधि",
+      "category": "Farming Income Support",
+      "benefit": "₹6,000 per year, paid in 3 installments of ₹2,000 directly to bank account",
+      "description": "Direct income support for small and marginal farmer families to help with agricultural and household expenses.",
+      "rules": {
+        "all_of": [
+          { "field": "has_farmland", "operator": "equals", "value": true },
+          { "field": "land_size_acres", "operator": "lte", "value": 5 },
+          { "field": "has_bank_account", "operator": "equals", "value": true },
+          { "field": "has_aadhaar", "operator": "equals", "value": true }
+        ]
+      },
+      "why_template": "You own {land_size_acres} acres of farmland (within the ~5 acre / 2 hectare limit for small & marginal farmers) and have an Aadhaar-linked bank account.",
+      "almost_eligible_hint": "If you don't yet have an Aadhaar-linked bank account, this is the main step needed to apply.",
+      "apply_link": "https://pmkisan.gov.in"
+    },
+    {
+      "id": "pm-jay",
+      "name": "Ayushman Bharat – PM Jan Arogya Yojana (PM-JAY)",
+      "hindi_name": "आयुष्मान भारत – प्रधानमंत्री जन आरोग्य योजना",
+      "category": "Health Insurance",
+      "benefit": "Up to ₹5 lakh per family per year for cashless hospital treatment at empanelled hospitals",
+      "description": "Free health insurance cover for economically vulnerable families and all senior citizens aged 70+.",
+      "rules": {
+        "any_of": [
+          { "field": "age", "operator": "gte", "value": 70 },
+          { "field": "house_type", "operator": "equals", "value": "kucha" },
+          { "field": "occupation", "operator": "in", "value": ["daily_wage_laborer", "street_vendor", "domestic_worker", "construction_worker"] },
+          { "field": "monthly_income", "operator": "lt", "value": 10000 }
+        ]
+      },
+      "why_template": "You qualify because of: {matched_criteria_description}.",
+      "almost_eligible_hint": null,
+      "apply_link": "https://pmjay.gov.in"
+    },
+    {
+      "id": "pmay",
+      "name": "Pradhan Mantri Awas Yojana (PMAY)",
+      "hindi_name": "प्रधानमंत्री आवास योजना",
+      "category": "Housing",
+      "benefit": "Financial assistance (typically ₹1.2–1.3 lakh in rural areas) to build a pucca house",
+      "description": "Helps families living in kucha (mud/thatch) houses build a permanent pucca house.",
+      "rules": {
+        "all_of": [
+          { "field": "house_type", "operator": "equals", "value": "kucha" },
+          { "field": "monthly_income", "operator": "lt", "value": 15000 }
+        ]
+      },
+      "why_template": "You currently live in a kucha house and your household income is below ₹15,000/month, which matches PMAY's target group.",
+      "almost_eligible_hint": null,
+      "apply_link": "https://pmaymis.gov.in"
+    },
+    {
+      "id": "apy",
+      "name": "Atal Pension Yojana (APY)",
+      "hindi_name": "अटल पेंशन योजना",
+      "category": "Pension / Old-age Security",
+      "benefit": "Guaranteed monthly pension of ₹1,000–₹5,000 after age 60, based on contribution amount",
+      "description": "A pension scheme for workers in the unorganised sector with no formal employer pension.",
+      "rules": {
+        "all_of": [
+          { "field": "age", "operator": "gte", "value": 18 },
+          { "field": "age", "operator": "lte", "value": 40 },
+          { "field": "occupation", "operator": "in", "value": ["daily_wage_laborer", "street_vendor", "domestic_worker", "construction_worker", "farmer", "other_informal"] },
+          { "field": "has_bank_account", "operator": "equals", "value": true }
+        ]
+      },
+      "why_template": "You are {age} years old, work in the informal sector, and have a bank account — APY is designed exactly for workers like you who don't have an employer pension.",
+      "almost_eligible_hint": "APY enrollment is only open between ages 18-40 — if you're outside this range, this scheme won't apply, but PM-SYM may have alternatives.",
+      "apply_link": "https://www.npscra.nsdl.co.in/scheme-details.php"
+    },
+    {
+      "id": "ujjwala",
+      "name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+      "hindi_name": "प्रधानमंत्री उज्ज्वला योजना",
+      "category": "Household / Clean Energy",
+      "benefit": "Free LPG gas connection (with deposit-free cylinder) for eligible women-headed households",
+      "description": "Provides clean cooking fuel access to low-income households, registered in the woman's name.",
+      "rules": {
+        "all_of": [
+          { "field": "gender", "operator": "equals", "value": "female" },
+          { "field": "has_lpg_connection", "operator": "equals", "value": false },
+          { "field": "monthly_income", "operator": "lt", "value": 10000 }
+        ]
+      },
+      "why_template": "As a woman applicant from a household with income below ₹10,000/month and no existing LPG connection, you qualify for a free Ujjwala connection.",
+      "almost_eligible_hint": null,
+      "apply_link": "https://www.pmuy.gov.in"
+    }
+  ]
+}

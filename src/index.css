@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', 'Noto Sans Devanagari', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-cream-200 text-teal-850 min-h-screen;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-saffron-500 to-saffron-600 text-white font-semibold py-3 px-6 rounded-xl
+           shadow-lg shadow-saffron-500/30 hover:shadow-xl hover:shadow-saffron-500/40
+           transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-teal-850 text-cream-100 font-medium py-2.5 px-5 rounded-xl
+           hover:bg-teal-900 transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-xl shadow-teal-900/5 p-6
+           border border-teal-100/50;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-teal-200
+           focus:border-saffron-400 focus:ring-4 focus:ring-saffron-100
+           outline-none transition-all duration-300 bg-white/80;
+  }
+
+  .quick-btn {
+    @apply px-4 py-2 rounded-lg bg-cream-100 border-2 border-teal-200
+           text-teal-800 font-medium text-sm
+           hover:border-saffron-400 hover:bg-saffron-50
+           active:scale-95 transition-all duration-200;
+  }
+
+  .quick-btn-active {
+    @apply border-saffron-500 bg-saffron-50 text-saffron-700;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-saffron-500 to-amber-500 bg-clip-text text-transparent;
+  }
+
+  .hindi-text {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cream-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-teal-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-teal-400;
+}
