@@ -1,3 +1,9 @@
-# Mitra-The_Voice_of_your_Rights
+# Mitra-The_Voice_of_your_Rights 
+India runs hundreds of welfare schemes worth lakhs of crores of rupees — yet a massive share of this support never reaches the people it was designed for. The gap isn't funding or policy; it's discovery and access. Studies on one of India's flagship insurance schemes, PM-JAY, found that only around 62% of eligible respondents were even aware the scheme existed, and of those, only about 78% knew they personally qualified — meaning roughly half of all eligible families don't know they're covered. The gap compounds at every step: even when people are aware of a scheme, research on another national health insurance program found that while a third of households had a hospitalization in the past year, fewer than 1% were able to actually use their benefits. The result is staggering fund underutilization — for one major construction-workers' welfare fund, only about 40% of a ₹50,000 crore corpus has ever been disbursed, leaving the rest unspent while the workers it was meant for remain unaware it exists. 
+For India's 450 million informal workers, daily wage earners, farmers, and first-generation families navigating government systems for the first time, this means rights on paper rarely translate into support in hand — not from lack of entitlement, but from lack of a system that meets people where they are: in their language, by voice, without requiring literacy or bureaucratic fluency.
+The Big Idea:
+Crores of rupees in government welfare sit unclaimed every year — not because people are ineligible, but because they don't know a scheme exists, don't know they qualify, or can't navigate the forms. Mitra closes this gap with a single conversation: a person talks to Mitra in their own language, by voice, answering a handful of simple life questions — and Mitra tells them exactly which government schemes they qualify for, why, and how to apply, with the paperwork already half-done.
+This is the "last mile of democracy" — turning entitlements that exist on paper into benefits that reach hands.
 
-[![Open in Bolt](https://bolt.new/static/open-in-bolt.svg)](https://bolt.new/~/sb1-6hemsuy5)
+  
+
